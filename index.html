@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Chat Demo</title>
+  <style>
+    body {
+      background-color: #f5f5f5; /* light blue */
+      color: #333333;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    #userVisualizer {
+      position: absolute;
+      top: 10vh;
+      left: 10vw;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background-color: #87ceeb; /* light blue */
+      margin: 0 auto;
+      transform: scale(0);
+    }
+
+    #chatHistory {
+      width: 50%;
+      background-color: #f5f5f5; /* light gray */
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .speechBubble {
+      padding: 12px;
+      border-radius: 12px;
+      max-width: 100%;
+    }
+
+    .user {
+      background-color: #87ceeb; /* light blue */
+      text-align: right;
+    }
+
+    .assistant {
+      background-color: #e6e6fa; /* light lavender */
+    }
+
+    #toggleBtn {
+      height: 40px;
+      margin: 16px;
+      background-color: #87ceeb; /* light blue */
+      color: #333333;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleBtn">Start</button>
+  <div id="userVisualizer"></div>
+  <div id="chatHistory">
+    <p class="speechBubble assistant">
+      Hello, how can I help you today? Press the start button to chat.
+    </p>
+  </div>
+</body>
+<!-- const OPENAI_API_KEY = "<your API key here>" -->
+<script src="secret.js"></script>
+<script src="app.js"></script>
+</html>
