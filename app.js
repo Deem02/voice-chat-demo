@@ -6,7 +6,6 @@ const VOICE = window.speechSynthesis
 
 let isChatting = false;
 let speechObj = null;
-// let context = new AudioContext();
 let stream = null
 let animationId = null
 let currentlySpeaking = null
@@ -18,11 +17,6 @@ const chatHistory = [{
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition // SpeechRecognition | undefined
 
-// async function startChat() {
-//   TOGGLE_BTN.innerText = "Stop"
-//   speechObj = new SpeechRecognition()
-//   letUserSpeak()
-// }
 
 async function startChat() {
     TOGGLE_BTN.innerText = "Stop";
